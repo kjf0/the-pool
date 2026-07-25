@@ -139,9 +139,21 @@ Expected behavior:
 - Define how team members discover, install, update, and validate shared skills.
 - Keep project-specific details in the project repo while allowing common workflow code to be reused.
 
+### 12. Backlog item metadata
+
+Improve the backlog structure so each item can carry planning and ownership metadata.
+
+Expected behavior:
+
+- Add labels to backlog items so similar work can be grouped.
+- Add priority to backlog items.
+- Add assigned dev to backlog items.
+- Add estimated code complete date to backlog items.
+- Keep the Markdown backlog easy to edit by hand while making it structured enough for the website backlog page to render.
+
 ## Website Work
 
-### 12. Build three-page website structure
+### 13. Build three-page website structure
 
 Create the initial website with three pages.
 
@@ -152,7 +164,7 @@ Expected behavior:
 - Backlog: a page showing backlog items and status, so the project backlog can be viewed in the website during development.
 - Keep the website simple enough to evolve while making the project workflow visible.
 
-### 13. Confirm reboot baseline
+### 14. Confirm reboot baseline
 
 Establish the current website baseline after the folder reboot.
 
@@ -162,7 +174,7 @@ Expected behavior:
 - Confirm whether this reboot should preserve, replace, or recover any files from the previous `the-pool` folder.
 - Document what is intentionally carried forward from the old project.
 
-### 14. Define first usable website milestone
+### 15. Define first usable website milestone
 
 Define the next product milestone for the Poolside website.
 
