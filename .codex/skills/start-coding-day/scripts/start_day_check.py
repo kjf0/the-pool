@@ -52,6 +52,32 @@ def slugify(text: str) -> str:
     return slug or "backlog-item"
 
 
+def remote_project_name(repo: Path) -> str | None:
+    code, output = git(repo, "remote", "get-url", "origin")
+    if code != 0 or not output:
+        return None
+    name = output.rstrip("/").split("/")[-1]
+    if name.endswith(".git"):
+        name = name[:-4]
+    return slugify(name) if name else None
+
+
+def main_worktree_path(repo: Path) -> Path:
+    code, output = git(repo, "worktree", "list", "--porcelain")
+    if code != 0:
+        return repo
+    for line in output.splitlines():
+        if line.startswith("worktree "):
+            return Path(line.removeprefix("worktree ")).resolve()
+    return repo
+
+
+def default_worktrees_path(repo: Path) -> Path:
+    main_path = main_worktree_path(repo)
+    project_name = remote_project_name(repo) or slugify(main_path.name)
+    return main_path.parent / "worktrees" / project_name
+
+
 def ahead_behind(repo: Path, branch: str) -> str:
     code, upstream = git(repo, "rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}")
     if code != 0:
@@ -81,8 +107,8 @@ def main() -> int:
         print(f"Not a git repository: {repo}", file=sys.stderr)
         return 2
     root = Path(output).resolve()
-    anchor = root.parent
-    worktrees_path = Path(args.worktrees_path).resolve() if args.worktrees_path else anchor
+    anchor = main_worktree_path(root).parent
+    worktrees_path = Path(args.worktrees_path).resolve() if args.worktrees_path else default_worktrees_path(root)
     now = datetime.now()
     timestamp = now.strftime("%Y-%m-%d %H%M")
     path_safe_timestamp = now.strftime("%Y-%m-%d_%H%M")
@@ -98,6 +124,7 @@ def main() -> int:
         slug = slugify(args.backlog_item)
         print(f"Display label: {timestamp}-{slug}")
         print(f"Suggested branch/worktree name: {path_safe_timestamp}-{slug}")
+        print(f"Suggested worktree path: {worktrees_path / f'{path_safe_timestamp}-{slug}'}")
 
     section("Local Changed Files")
     code, output = git(root, "status", "--short")

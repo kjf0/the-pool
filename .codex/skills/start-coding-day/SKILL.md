@@ -27,6 +27,7 @@ Use this skill to establish a clean, explicit starting point before development.
    - Remote configuration.
    - Tool visibility for `git`, `node`, `npm`, `pnpm`, and `gh`.
    - Whether local `main` and `origin/main` can be compared.
+   - Suggested branch/worktree name for the backlog item when provided.
 
 3. If the user asked to sync before work, or if syncing is clearly part of the requested startup, run:
 
@@ -67,6 +68,22 @@ Use a short lowercase description derived from the backlog item. Replace spaces 
 ```text
 2026-07-25_0915-build-three-page-website
 ```
+
+## Worktree Location
+
+Keep feature worktrees out of the top-level projects folder. By default, use:
+
+```text
+<projects-anchor>\worktrees\<project-name>\<branch-name>
+```
+
+For this project, use:
+
+```text
+E:\users\kjf\Documents\dev\ai\projects\worktrees\the-pool\<branch-name>
+```
+
+Do not create one sibling folder per worktree directly under `E:\users\kjf\Documents\dev\ai\projects`. If a developer chooses an in-repo `worktrees\` folder instead, keep it ignored by git.
 
 ## Project Notes
 
