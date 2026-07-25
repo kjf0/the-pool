@@ -127,9 +127,21 @@ Expected behavior:
 - Add Codex memory update notes only when explicitly requested.
 - Keep memory short, evidence-based, and focused on repeatable workflow lessons.
 
+### 11. Shared skills strategy
+
+Design a way to share Codex workflow skills between projects.
+
+Expected behavior:
+
+- Treat repo-owned skills as the source of truth for project-specific workflows.
+- Avoid duplicate personal and repo skill copies that can drift out of sync.
+- Decide whether common cross-project skills should live in a dedicated shared skills repository, a plugin, a template, a submodule, or a documented sync/install workflow.
+- Define how team members discover, install, update, and validate shared skills.
+- Keep project-specific details in the project repo while allowing common workflow code to be reused.
+
 ## Website Work
 
-### 11. Build three-page website structure
+### 12. Build three-page website structure
 
 Create the initial website with three pages.
 
@@ -140,7 +152,7 @@ Expected behavior:
 - Backlog: a page showing backlog items and status, so the project backlog can be viewed in the website during development.
 - Keep the website simple enough to evolve while making the project workflow visible.
 
-### 12. Confirm reboot baseline
+### 13. Confirm reboot baseline
 
 Establish the current website baseline after the folder reboot.
 
@@ -150,7 +162,7 @@ Expected behavior:
 - Confirm whether this reboot should preserve, replace, or recover any files from the previous `the-pool` folder.
 - Document what is intentionally carried forward from the old project.
 
-### 13. Define first usable website milestone
+### 14. Define first usable website milestone
 
 Define the next product milestone for the Poolside website.
 
