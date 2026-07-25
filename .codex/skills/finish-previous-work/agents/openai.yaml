@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finish Previous Work"
+  short_description: "Inspect and clean up leftover local work safely."
+  default_prompt: "Help me finish previous work for this project."

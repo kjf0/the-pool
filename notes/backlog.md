@@ -71,11 +71,11 @@ Evidence:
 
 ### 3. Finish previous work skill
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, git
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-25
 
 Create a Codex skill that cleans up work left from a previous day.
 
@@ -84,6 +84,12 @@ Expected behavior:
 - Identify uncommitted changes, unpublished branches, stale worktrees, and incomplete validation.
 - Suggest whether to commit, stash, push, archive, or continue the work.
 - Avoid deleting worktrees, force-pushing, or discarding changes without explicit approval.
+
+Evidence:
+
+- Created shared repo Codex skill at `.codex\skills\finish-previous-work`.
+- Added `finish_previous_work.py` helper script for read-only leftover work audits.
+- Verified the helper reports dirty worktrees, branches without upstreams, backlog matches, open PRs, and cleanup recommendations.
 
 ### 4. Sync local main skill
 
