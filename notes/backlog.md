@@ -93,11 +93,11 @@ Evidence:
 
 ### 4. Sync local main skill
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, git
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-25
 
 Create a Codex skill or script-backed workflow to update local `main`.
 
@@ -107,6 +107,12 @@ Expected behavior:
 - Confirm the local branch is `main` or switch safely.
 - Fast-forward local `main` from `origin/main` when possible.
 - Stop and report clearly if local `main` has divergent or uncommitted work.
+
+Evidence:
+
+- Created shared repo Codex skill at `.codex\skills\sync-local-main`.
+- Added `sync_local_main.py` helper script for dry-run checks, fetches, and fast-forward-only main updates.
+- Verified the helper reports local changes, current branch, fetch status, ahead/behind counts, and safe stop conditions.
 
 ### 5. Create feature worktree skill
 
