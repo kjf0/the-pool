@@ -26,7 +26,7 @@ Expected behavior:
 
 Evidence:
 
-- Created personal Codex skill at `C:\Users\kjf\.codex\skills\start-coding-day`.
+- Created shared repo Codex skill at `.codex\skills\start-coding-day`.
 - Added `start_day_check.py` helper script for repeatable repo startup checks.
 - Validated the skill successfully.
 
