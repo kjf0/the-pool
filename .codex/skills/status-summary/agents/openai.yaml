@@ -1,0 +1,4 @@
+interface:
+  display_name: "Status Summary"
+  short_description: "Summarize project state before a break or after returning."
+  default_prompt: "Give me a status-summary for this project."
