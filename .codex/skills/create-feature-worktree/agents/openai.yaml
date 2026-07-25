@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Feature Worktree"
+  short_description: "Create a trusted feature worktree from main."
+  default_prompt: "Create a feature worktree for the next backlog item."

@@ -116,11 +116,11 @@ Evidence:
 
 ### 5. Create feature worktree skill
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, git, worktree
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-25
 
 Create a Codex skill that creates a dedicated worktree and branch from updated `main`.
 
@@ -131,6 +131,14 @@ Expected behavior:
 - Create a `codex/...` branch unless another prefix is requested.
 - Check out the branch in the new worktree.
 - Verify dependencies and record the task context.
+- Add the exact created worktree path to Git `safe.directory` to avoid Windows dubious ownership warnings.
+
+Evidence:
+
+- Created shared repo Codex skill at `.codex\skills\create-feature-worktree`.
+- Added `create_feature_worktree.py` helper script for dry-run previews and safe worktree creation.
+- Implemented the shared path policy: `E:\users\kjf\Documents\dev\ai\projects\worktrees\the-pool\<branch-name>`.
+- Added exact-path `safe.directory` trust after worktree creation, without broad wildcard trust.
 
 ### 6. Modify code workflow
 
