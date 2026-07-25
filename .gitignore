@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+.env
+.env.*
+
+.DS_Store
+Thumbs.db
+
+notes/.obsidian/workspace.json
+notes/.obsidian/workspace-mobile.json
