@@ -139,7 +139,21 @@ Expected behavior:
 - Define how team members discover, install, update, and validate shared skills.
 - Keep project-specific details in the project repo while allowing common workflow code to be reused.
 
-### 12. Backlog item metadata
+### 12. Skill report skill
+
+Create a Codex skill that reports the repo skills available for the current project.
+
+Expected behavior:
+
+- Trigger when the user asks for `skill-report`.
+- List repo skills available under `.codex\skills`.
+- Include each skill name.
+- Include a short description of what each skill does.
+- Include a label for grouping similar skills.
+- Prefer repo-owned skills over personal duplicates.
+- Make the report useful for a dev team deciding which shared workflow skill to use.
+
+### 13. Backlog item metadata
 
 Improve the backlog structure so each item can carry planning and ownership metadata.
 
@@ -153,7 +167,7 @@ Expected behavior:
 
 ## Website Work
 
-### 13. Build three-page website structure
+### 14. Build three-page website structure
 
 Create the initial website with three pages.
 
@@ -164,7 +178,7 @@ Expected behavior:
 - Backlog: a page showing backlog items and status, so the project backlog can be viewed in the website during development.
 - Keep the website simple enough to evolve while making the project workflow visible.
 
-### 14. Confirm reboot baseline
+### 15. Confirm reboot baseline
 
 Establish the current website baseline after the folder reboot.
 
@@ -174,7 +188,7 @@ Expected behavior:
 - Confirm whether this reboot should preserve, replace, or recover any files from the previous `the-pool` folder.
 - Document what is intentionally carried forward from the old project.
 
-### 15. Define first usable website milestone
+### 16. Define first usable website milestone
 
 Define the next product milestone for the Poolside website.
 
