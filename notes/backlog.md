@@ -46,11 +46,11 @@ Evidence:
 
 ### 2. Status summary skill
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, reporting, handoff
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-25
 
 Create a Codex skill that reports the current project state at a logical stopping point so work can resume later.
 
@@ -62,6 +62,12 @@ Expected behavior:
 - Recommend the next action after a break, including whether to merge PRs, sync `main`, clean up worktrees, or continue coding.
 - Include enough context for returning after several hours or overnight.
 - Keep the summary concise and durable enough to paste into notes if needed.
+
+Evidence:
+
+- Created shared repo Codex skill at `.codex\skills\status-summary`.
+- Added `status_summary.py` helper script for read-only project status reports.
+- Verified the helper reports current branch, worktree path, open PRs, backlog context, likely active item, and recommended next action.
 
 ### 3. Finish previous work skill
 

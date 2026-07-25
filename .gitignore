@@ -3,6 +3,10 @@ node_modules/
 dist/
 build/
 
+# Python Cache
+__pycache__/
+*.pyc
+
 # Local Environment Secrets
 .env
 .env.*
