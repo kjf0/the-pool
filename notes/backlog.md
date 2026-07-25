@@ -142,7 +142,7 @@ Evidence:
 
 ### 6. Modify code workflow
 
-Status: In progress
+Status: Done
 Labels: workflow, codex-skill, development
 Priority: P1
 Assigned dev: Codex
@@ -157,6 +157,12 @@ Expected behavior:
 - Make small, scoped changes.
 - Run appropriate validation before publishing.
 - Update notes when decisions or workflow lessons should persist.
+
+Evidence:
+
+- Created shared repo Codex skill at `.codex\skills\modify-code-workflow`.
+- Added `modify_code_check.py` helper script for pre-edit and post-edit development context reports.
+- Documented the normal development loop: gather context, edit narrowly, validate appropriately, and summarize for publishing.
 
 ### 7. Sync feature branch with main skill
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Modify Code Workflow"
+  short_description: "Guide scoped code changes from context to validation."
+  default_prompt: "Use the modify code workflow for this project."
