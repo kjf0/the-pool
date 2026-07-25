@@ -8,11 +8,25 @@ This project was originally `pool-site`, then renamed to `the-pool`. It is being
 
 The reboot followed git problems and file permission errors, so workflow reliability is part of the project scope, not just website development.
 
+## Metadata Fields
+
+Each backlog item should include:
+
+- Status: `Not started`, `In progress`, `Done`, or `Blocked`
+- Labels: comma-separated grouping labels
+- Priority: `P0`, `P1`, `P2`, or `P3`
+- Assigned dev: person or role responsible for code completion
+- Estimated code complete: `YYYY-MM-DD` or `TBD`
+
 ## Workflow And Codex Skills
 
 ### 1. Start coding day skill
 
 Status: Done
+Labels: workflow, codex-skill, git
+Priority: P0
+Assigned dev: Codex
+Estimated code complete: 2026-07-25
 
 Create a Codex skill that prepares the project for a workday of coding.
 
@@ -32,6 +46,12 @@ Evidence:
 
 ### 2. Finish previous work skill
 
+Status: Not started
+Labels: workflow, codex-skill, git
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
 Create a Codex skill that cleans up work left from a previous day.
 
 Expected behavior:
@@ -41,6 +61,12 @@ Expected behavior:
 - Avoid deleting worktrees, force-pushing, or discarding changes without explicit approval.
 
 ### 3. Sync local main skill
+
+Status: Not started
+Labels: workflow, codex-skill, git
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
 
 Create a Codex skill or script-backed workflow to update local `main`.
 
@@ -52,6 +78,12 @@ Expected behavior:
 - Stop and report clearly if local `main` has divergent or uncommitted work.
 
 ### 4. Create feature worktree skill
+
+Status: Not started
+Labels: workflow, codex-skill, git, worktree
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
 
 Create a Codex skill that creates a dedicated worktree and branch from updated `main`.
 
@@ -65,6 +97,12 @@ Expected behavior:
 
 ### 5. Modify code workflow
 
+Status: Not started
+Labels: workflow, codex-skill, development
+Priority: P1
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
 Define the normal Codex development loop for this project.
 
 Expected behavior:
@@ -77,6 +115,12 @@ Expected behavior:
 
 ### 6. Sync feature branch with main skill
 
+Status: Not started
+Labels: workflow, codex-skill, git
+Priority: P1
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
 Create a Codex skill that updates an active feature branch from current `main`.
 
 Expected behavior:
@@ -87,6 +131,12 @@ Expected behavior:
 - Run validation after the sync completes.
 
 ### 7. Publish branch/worktree skill
+
+Status: Not started
+Labels: workflow, codex-skill, git, github
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
 
 Create a Codex skill that prepares and publishes a branch.
 
@@ -100,6 +150,12 @@ Expected behavior:
 
 ### 8. Create PR skill
 
+Status: Not started
+Labels: workflow, codex-skill, github
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
 Create a Codex skill that opens a pull request to `main`.
 
 Expected behavior:
@@ -110,6 +166,12 @@ Expected behavior:
 
 ### 9. Review and merge outside Codex
 
+Status: Not started
+Labels: workflow, github, review
+Priority: P2
+Assigned dev: User
+Estimated code complete: TBD
+
 Keep PR review and merge as a separately supervised step outside Codex.
 
 Expected behavior:
@@ -118,6 +180,12 @@ Expected behavior:
 - Final merge remains a deliberate user action unless the policy changes later.
 
 ### 10. Project memory curator skill
+
+Status: Not started
+Labels: workflow, codex-skill, memory, notes
+Priority: P1
+Assigned dev: Unassigned
+Estimated code complete: TBD
 
 Create a Codex skill for durable project memory and notes hygiene.
 
@@ -128,6 +196,12 @@ Expected behavior:
 - Keep memory short, evidence-based, and focused on repeatable workflow lessons.
 
 ### 11. Shared skills strategy
+
+Status: Not started
+Labels: workflow, codex-skill, team
+Priority: P1
+Assigned dev: Unassigned
+Estimated code complete: TBD
 
 Design a way to share Codex workflow skills between projects.
 
@@ -140,6 +214,12 @@ Expected behavior:
 - Keep project-specific details in the project repo while allowing common workflow code to be reused.
 
 ### 12. Skill report skill
+
+Status: Not started
+Labels: workflow, codex-skill, reporting
+Priority: P1
+Assigned dev: Unassigned
+Estimated code complete: TBD
 
 Create a Codex skill that reports the repo skills available for the current project.
 
@@ -155,6 +235,12 @@ Expected behavior:
 
 ### 13. Backlog item metadata
 
+Status: Done
+Labels: backlog, planning, website-data
+Priority: P0
+Assigned dev: Codex
+Estimated code complete: 2026-07-25
+
 Improve the backlog structure so each item can carry planning and ownership metadata.
 
 Expected behavior:
@@ -165,9 +251,21 @@ Expected behavior:
 - Add estimated code complete date to backlog items.
 - Keep the Markdown backlog easy to edit by hand while making it structured enough for the website backlog page to render.
 
+Evidence:
+
+- Added a metadata field legend.
+- Added labels, priority, assigned dev, and estimated code complete fields to all current backlog items.
+- Marked item 13 complete after applying the metadata structure.
+
 ## Website Work
 
 ### 14. Build three-page website structure
+
+Status: Not started
+Labels: website, backlog, project-page
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
 
 Create the initial website with three pages.
 
@@ -180,6 +278,12 @@ Expected behavior:
 
 ### 15. Confirm reboot baseline
 
+Status: Not started
+Labels: reboot, audit, recovery
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
 Establish the current website baseline after the folder reboot.
 
 Expected behavior:
@@ -189,6 +293,12 @@ Expected behavior:
 - Document what is intentionally carried forward from the old project.
 
 ### 16. Define first usable website milestone
+
+Status: Not started
+Labels: product, website, planning
+Priority: P1
+Assigned dev: Unassigned
+Estimated code complete: TBD
 
 Define the next product milestone for the Poolside website.
 
