@@ -142,11 +142,11 @@ Evidence:
 
 ### 6. Modify code workflow
 
-Status: Not started
+Status: In progress
 Labels: workflow, codex-skill, development
 Priority: P1
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-25
 
 Define the normal Codex development loop for this project.
 
@@ -352,3 +352,22 @@ Expected behavior:
 - Clarify the first screen and core workflow.
 - Identify the minimum useful pool maintenance data model.
 - Decide which content belongs in the website and which belongs only in Obsidian notes.
+
+### 18. Editable backlog page with persisted data
+
+Status: Not started
+Labels: website, backlog, data-model
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
+Give the website backlog page the ability to add and change backlog items.
+
+Expected behavior:
+
+- Move backlog items out of the Markdown file and into a persisted data structure.
+- Keep enough structure to support labels, priority, assigned dev, status, estimated code complete date, and item descriptions.
+- Let the backlog page create new backlog items.
+- Let the backlog page edit existing backlog items.
+- Preserve a readable project/backlog report for Codex and human review.
+- Decide how Markdown notes should reference or summarize the persisted backlog after migration.
