@@ -44,7 +44,26 @@ Evidence:
 - Added `start_day_check.py` helper script for repeatable repo startup checks.
 - Validated the skill successfully.
 
-### 2. Finish previous work skill
+### 2. Status summary skill
+
+Status: Not started
+Labels: workflow, codex-skill, reporting, handoff
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
+Create a Codex skill that reports the current project state at a logical stopping point so work can resume later.
+
+Expected behavior:
+
+- Trigger when the user asks for `status-summary`.
+- Summarize current branch, worktree path, open PRs, uncommitted changes, and recently completed work.
+- Identify the active backlog item, if any.
+- Recommend the next action after a break, including whether to merge PRs, sync `main`, clean up worktrees, or continue coding.
+- Include enough context for returning after several hours or overnight.
+- Keep the summary concise and durable enough to paste into notes if needed.
+
+### 3. Finish previous work skill
 
 Status: Not started
 Labels: workflow, codex-skill, git
@@ -60,7 +79,7 @@ Expected behavior:
 - Suggest whether to commit, stash, push, archive, or continue the work.
 - Avoid deleting worktrees, force-pushing, or discarding changes without explicit approval.
 
-### 3. Sync local main skill
+### 4. Sync local main skill
 
 Status: Not started
 Labels: workflow, codex-skill, git
@@ -77,7 +96,7 @@ Expected behavior:
 - Fast-forward local `main` from `origin/main` when possible.
 - Stop and report clearly if local `main` has divergent or uncommitted work.
 
-### 4. Create feature worktree skill
+### 5. Create feature worktree skill
 
 Status: Not started
 Labels: workflow, codex-skill, git, worktree
@@ -95,7 +114,7 @@ Expected behavior:
 - Check out the branch in the new worktree.
 - Verify dependencies and record the task context.
 
-### 5. Modify code workflow
+### 6. Modify code workflow
 
 Status: Not started
 Labels: workflow, codex-skill, development
@@ -113,7 +132,7 @@ Expected behavior:
 - Run appropriate validation before publishing.
 - Update notes when decisions or workflow lessons should persist.
 
-### 6. Sync feature branch with main skill
+### 7. Sync feature branch with main skill
 
 Status: Not started
 Labels: workflow, codex-skill, git
@@ -130,7 +149,7 @@ Expected behavior:
 - Surface conflicts clearly.
 - Run validation after the sync completes.
 
-### 7. Publish branch/worktree skill
+### 8. Publish branch/worktree skill
 
 Status: Not started
 Labels: workflow, codex-skill, git, github
@@ -148,7 +167,7 @@ Expected behavior:
 - Commit with a clear message.
 - Push the branch to origin.
 
-### 8. Create PR skill
+### 9. Create PR skill
 
 Status: Not started
 Labels: workflow, codex-skill, github
@@ -164,7 +183,7 @@ Expected behavior:
 - Create a draft PR by default.
 - Include a concise summary, validation results, and notes about any known risks.
 
-### 9. Review and merge outside Codex
+### 10. Review and merge outside Codex
 
 Status: Not started
 Labels: workflow, github, review
@@ -179,7 +198,7 @@ Expected behavior:
 - Codex may summarize PRs, check CI, and address review comments.
 - Final merge remains a deliberate user action unless the policy changes later.
 
-### 10. Project memory curator skill
+### 11. Project memory curator skill
 
 Status: Not started
 Labels: workflow, codex-skill, memory, notes
@@ -195,7 +214,7 @@ Expected behavior:
 - Add Codex memory update notes only when explicitly requested.
 - Keep memory short, evidence-based, and focused on repeatable workflow lessons.
 
-### 11. Shared skills strategy
+### 12. Shared skills strategy
 
 Status: Not started
 Labels: workflow, codex-skill, team
@@ -213,7 +232,7 @@ Expected behavior:
 - Define how team members discover, install, update, and validate shared skills.
 - Keep project-specific details in the project repo while allowing common workflow code to be reused.
 
-### 12. Skill report skill
+### 13. Skill report skill
 
 Status: Not started
 Labels: workflow, codex-skill, reporting
@@ -233,7 +252,7 @@ Expected behavior:
 - Prefer repo-owned skills over personal duplicates.
 - Make the report useful for a dev team deciding which shared workflow skill to use.
 
-### 13. Backlog item metadata
+### 14. Backlog item metadata
 
 Status: Done
 Labels: backlog, planning, website-data
@@ -259,7 +278,7 @@ Evidence:
 
 ## Website Work
 
-### 14. Build three-page website structure
+### 15. Build three-page website structure
 
 Status: Not started
 Labels: website, backlog, project-page
@@ -276,7 +295,7 @@ Expected behavior:
 - Backlog: a page showing backlog items and status, so the project backlog can be viewed in the website during development.
 - Keep the website simple enough to evolve while making the project workflow visible.
 
-### 15. Confirm reboot baseline
+### 16. Confirm reboot baseline
 
 Status: Not started
 Labels: reboot, audit, recovery
@@ -292,7 +311,7 @@ Expected behavior:
 - Confirm whether this reboot should preserve, replace, or recover any files from the previous `the-pool` folder.
 - Document what is intentionally carried forward from the old project.
 
-### 16. Define first usable website milestone
+### 17. Define first usable website milestone
 
 Status: Not started
 Labels: product, website, planning
