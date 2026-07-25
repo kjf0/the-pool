@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Local Main"
+  short_description: "Safely fast-forward local main from origin."
+  default_prompt: "Sync local main for this project."
