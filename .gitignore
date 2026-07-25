@@ -1,11 +1,19 @@
+# Node & Build Outputs
 node_modules/
 dist/
 build/
+
+# Local Environment Secrets
 .env
 .env.*
 
+# Ignore volatile Obsidian internal UI states
+**/notes/.obsidian/workspace.json
+**/notes/.obsidian/workspace-mobile.json
+**/notes/.obsidian/cache/
+**/notes/.obsidian/graph.json
+
+# Ignore Local OS System Logs
 .DS_Store
 Thumbs.db
-
-notes/.obsidian/workspace.json
-notes/.obsidian/workspace-mobile.json
+desktop.ini
