@@ -98,11 +98,11 @@ Define the normal Codex development loop for this project.
 
 ### 7. Sync feature branch with main skill
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, git
 Priority: P1
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
 
 Create a Codex skill that updates an active feature branch from current main.
 
