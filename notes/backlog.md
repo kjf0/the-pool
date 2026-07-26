@@ -183,11 +183,11 @@ Expected behavior:
 
 ### 8. Publish branch/worktree skill
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, git, github
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
 
 Create a Codex skill that prepares and publishes a branch.
 
@@ -198,6 +198,14 @@ Expected behavior:
 - Stage only intentional files.
 - Commit with a clear message.
 - Push the branch to origin.
+
+Evidence:
+
+- Created shared repo Codex skill at `.codex\skills\publish-branch-worktree`.
+- Added `publish_branch_worktree.py` helper script for dry-run scope review, validation, explicit staging, commit, and push.
+- Verified the helper refuses default-branch publishing and requires explicit files or `--all-changes`.
+- Validated the skill with `quick_validate.py`.
+- Compiled the helper with `python -m py_compile`.
 
 ### 9. Create PR skill
 

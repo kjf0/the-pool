@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish Branch Worktree"
+  short_description: "Prepare, commit, and push a feature branch."
+  default_prompt: "Publish the current branch/worktree."
