@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create PR"
+  short_description: "Open a draft pull request for the current branch."
+  default_prompt: "Create a draft PR for the current branch."
