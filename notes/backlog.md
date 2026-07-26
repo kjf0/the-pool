@@ -377,11 +377,11 @@ Evidence:
 
 ### 17. Confirm reboot baseline
 
-Status: Not started
+Status: Done
 Labels: reboot, audit, recovery
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
 
 Establish the current website baseline after the folder reboot.
 
@@ -390,6 +390,14 @@ Expected behavior:
 - Inspect the current file tree and git history.
 - Confirm whether this reboot should preserve, replace, or recover any files from the previous `the-pool` folder.
 - Document what is intentionally carried forward from the old project.
+
+Evidence:
+
+- Inspected the current file tree, recent git history, remotes, and worktree state.
+- Confirmed the active anchor is `E:\users\kjf\Documents\dev\ai\projects\the-pool`.
+- Confirmed the old recovered folder exists separately as `E:\users\kjf\Documents\dev\ai\projects\the-pool-old`.
+- Documented the current baseline in `notes\architecture.md`.
+- Decided not to automatically recover files from `the-pool-old`; any future recovery should be deliberate and separately scoped.
 
 ### 18. Define first usable website milestone
 
