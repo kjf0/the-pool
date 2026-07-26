@@ -353,11 +353,11 @@ Evidence:
 
 ### 16. Build three-page website structure
 
-Status: Not started
+Status: Done
 Labels: website, backlog, project-page
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
 
 Create the initial website with three pages.
 
@@ -367,6 +367,13 @@ Expected behavior:
 - Project: a project status and information page.
 - Backlog: a page showing backlog items and status, so the project backlog can be viewed in the website during development.
 - Keep the website simple enough to evolve while making the project workflow visible.
+
+Evidence:
+
+- Replaced the placeholder `public_html\index.html` with a complete home page.
+- Added `public_html\project.html` for project status and workflow context.
+- Added `public_html\backlog.html` for a static backlog snapshot.
+- Added shared styling in `public_html\styles.css`.
 
 ### 17. Confirm reboot baseline
 
