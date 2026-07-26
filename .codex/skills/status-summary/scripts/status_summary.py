@@ -76,6 +76,33 @@ def parse_backlog(path: Path) -> list[BacklogItem]:
     return items
 
 
+def parse_backlog_json(path: Path) -> list[BacklogItem]:
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    items: list[BacklogItem] = []
+    for entry in data:
+        items.append(
+            BacklogItem(
+                number=int(entry.get("id", 0)),
+                title=str(entry.get("title", "")).strip(),
+                status=str(entry.get("status", "")).strip(),
+                labels=str(entry.get("labels", "")).strip(),
+                priority=str(entry.get("priority", "")).strip(),
+                assigned=str(entry.get("assignedDev", "")).strip(),
+                estimate=str(entry.get("estimatedCodeComplete", "")).strip(),
+            )
+        )
+    return [item for item in items if item.number and item.title]
+
+
+def load_backlog(root: Path) -> list[BacklogItem]:
+    json_items = parse_backlog_json(root / "public_html" / "backlog-data.json")
+    if json_items:
+        return json_items
+    return parse_backlog(root / "notes" / "backlog.md")
+
+
 def current_branch(repo: Path) -> str:
     code, output = git(repo, "branch", "--show-current")
     return output if code == 0 and output else "(detached HEAD)"
@@ -117,7 +144,7 @@ def main() -> int:
         return 2
     root = Path(root_output).resolve()
     branch = current_branch(root)
-    backlog_items = parse_backlog(root / "notes" / "backlog.md")
+    backlog_items = load_backlog(root)
     prs, pr_error = open_prs(root)
 
     print("# Status Summary Report")

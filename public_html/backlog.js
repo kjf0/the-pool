@@ -15,18 +15,27 @@
   const newButton = document.querySelector("#new-item");
   const resetButton = document.querySelector("#reset-data");
 
-  let items = loadItems();
+  let seedItems = [];
+  let items = [];
 
-  function loadItems() {
+  async function loadSeedItems() {
+    const response = await fetch("backlog-data.json", { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error("Could not load backlog-data.json");
+    }
+    return response.json();
+  }
+
+  function loadStoredItems() {
     const stored = localStorage.getItem(storageKey);
     if (!stored) {
-      return [...window.initialBacklogItems];
+      return null;
     }
 
     try {
       return JSON.parse(stored);
     } catch {
-      return [...window.initialBacklogItems];
+      return null;
     }
   }
 
@@ -121,8 +130,8 @@
   newButton.addEventListener("click", clearForm);
 
   resetButton.addEventListener("click", () => {
-    items = [...window.initialBacklogItems];
-    saveItems();
+    items = [...seedItems];
+    localStorage.removeItem(storageKey);
     clearForm();
     renderItems();
   });
@@ -138,6 +147,14 @@
     }
   });
 
-  clearForm();
-  renderItems();
+  loadSeedItems()
+    .then((loadedItems) => {
+      seedItems = loadedItems;
+      items = loadStoredItems() || [...seedItems];
+      clearForm();
+      renderItems();
+    })
+    .catch((error) => {
+      list.textContent = error.message;
+    });
 })();

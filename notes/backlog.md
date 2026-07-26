@@ -436,7 +436,8 @@ Expected behavior:
 
 Evidence:
 
-- Added `public_html\backlog-data.js` as the website backlog seed data.
-- Added `public_html\backlog.js` to create, edit, render, reset, and persist backlog items in browser `localStorage`.
+- Added `public_html\backlog-data.json` as the repo-backed structured backlog data source.
+- Added `public_html\backlog.js` to load the JSON data, create, edit, render, reset, and persist browser-local backlog edits in `localStorage`.
 - Updated `public_html\backlog.html` with an editable form and rendered item list.
-- Kept `notes\backlog.md` as the durable project report while the website uses browser-local editable data.
+- Updated backlog-related repo helpers to prefer `public_html\backlog-data.json` before falling back to `notes\backlog.md`.
+- Kept `notes\backlog.md` as the durable narrative project report while JSON carries the structured backlog state.
