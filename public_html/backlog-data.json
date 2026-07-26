@@ -187,6 +187,6 @@
     "priority": "P0",
     "assignedDev": "Codex",
     "estimatedCodeComplete": "2026-07-26",
-    "description": "Let the website backlog page add and change backlog items with browser-local persistence."
+    "description": "Use repo-backed JSON as the structured backlog source, regenerate the Markdown backlog report from it, and let the website backlog page add and change browser-local backlog items."
   }
 ]
