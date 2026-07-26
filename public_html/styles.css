@@ -35,3 +35,71 @@ p,
 li {
   line-height: 1.6;
 }
+
+form {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0 40px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #bcc8c2;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+button {
+  border: 1px solid #185b6b;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #185b6b;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 10px 12px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.backlog-item {
+  border-top: 1px solid #d8dedb;
+  padding: 18px 0;
+}
+
+.backlog-item h3 {
+  margin-bottom: 8px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 6px 12px;
+  margin: 0;
+}
+
+dt {
+  color: #5f6b66;
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+}

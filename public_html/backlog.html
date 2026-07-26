@@ -15,11 +15,70 @@
 
     <main>
       <h1>Backlog</h1>
-      <ul>
-        <li>16. Build three-page website structure - Done</li>
-        <li>17. Confirm reboot baseline - Not started</li>
-        <li>19. Editable backlog page with persisted data - Not started</li>
-      </ul>
+      <p>Backlog changes are saved in this browser.</p>
+
+      <form id="backlog-form">
+        <input type="hidden" id="item-id">
+
+        <label>
+          Title
+          <input id="item-title" required>
+        </label>
+
+        <label>
+          Status
+          <select id="item-status">
+            <option>Not started</option>
+            <option>In progress</option>
+            <option>Done</option>
+            <option>Blocked</option>
+          </select>
+        </label>
+
+        <label>
+          Priority
+          <select id="item-priority">
+            <option>P0</option>
+            <option>P1</option>
+            <option>P2</option>
+            <option>P3</option>
+          </select>
+        </label>
+
+        <label>
+          Labels
+          <input id="item-labels" placeholder="website, backlog">
+        </label>
+
+        <label>
+          Assigned dev
+          <input id="item-assigned" placeholder="Unassigned">
+        </label>
+
+        <label>
+          Estimated code complete
+          <input id="item-estimate" placeholder="TBD">
+        </label>
+
+        <label>
+          Description
+          <textarea id="item-description" rows="4"></textarea>
+        </label>
+
+        <div class="actions">
+          <button type="submit">Save item</button>
+          <button type="button" id="new-item">New item</button>
+          <button type="button" id="reset-data">Reset data</button>
+        </div>
+      </form>
+
+      <section>
+        <h2>Items</h2>
+        <div id="backlog-items"></div>
+      </section>
     </main>
+
+    <script src="backlog-data.js"></script>
+    <script src="backlog.js"></script>
   </body>
 </html>

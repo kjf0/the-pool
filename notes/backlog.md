@@ -417,11 +417,11 @@ Expected behavior:
 
 ### 19. Editable backlog page with persisted data
 
-Status: Not started
+Status: Done
 Labels: website, backlog, data-model
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
 
 Give the website backlog page the ability to add and change backlog items.
 
@@ -433,3 +433,10 @@ Expected behavior:
 - Let the backlog page edit existing backlog items.
 - Preserve a readable project/backlog report for Codex and human review.
 - Decide how Markdown notes should reference or summarize the persisted backlog after migration.
+
+Evidence:
+
+- Added `public_html\backlog-data.js` as the website backlog seed data.
+- Added `public_html\backlog.js` to create, edit, render, reset, and persist backlog items in browser `localStorage`.
+- Updated `public_html\backlog.html` with an editable form and rendered item list.
+- Kept `notes\backlog.md` as the durable project report while the website uses browser-local editable data.
