@@ -102,11 +102,11 @@
   {
     "id": 11,
     "title": "Project memory curator skill",
-    "status": "Not started",
+    "status": "Done",
     "labels": "workflow, codex-skill, memory, notes",
     "priority": "P1",
-    "assignedDev": "Unassigned",
-    "estimatedCodeComplete": "TBD",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-26",
     "description": "Create a Codex skill for durable project memory and notes hygiene."
   },
   {

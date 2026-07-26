@@ -138,11 +138,11 @@ Keep PR review and merge as a separately supervised step outside Codex.
 
 ### 11. Project memory curator skill
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, memory, notes
 Priority: P1
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
 
 Create a Codex skill for durable project memory and notes hygiene.
 
