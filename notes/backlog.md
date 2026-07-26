@@ -209,11 +209,11 @@ Evidence:
 
 ### 9. Create PR skill
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, github
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
 
 Create a Codex skill that opens a pull request to `main`.
 
@@ -222,6 +222,14 @@ Expected behavior:
 - Use the GitHub remote `kjf0/the-pool`.
 - Create a draft PR by default.
 - Include a concise summary, validation results, and notes about any known risks.
+
+Evidence:
+
+- Created shared repo Codex skill at `.codex\skills\create-pr`.
+- Added `create_pr.py` helper script for PR readiness checks and draft PR creation through `gh`.
+- Verified the helper refuses PR creation when the worktree has unpublished local changes.
+- Validated the skill with `quick_validate.py`.
+- Compiled the helper with `python -m py_compile`.
 
 ### 10. Review and merge outside Codex
 
