@@ -24,3 +24,7 @@ No package manager, build system, deployment metadata, or generated assets is pa
 Backlog data is stored in `public_html\backlog-data.json`. The website loads this file as seed data and stores browser-local edits in `localStorage`. Repo workflow helpers prefer the JSON data source and fall back to `notes\backlog.md` only when the JSON file is unavailable. Regenerate the Markdown report with `python scripts\sync_backlog_notes.py --apply` after changing the JSON file.
 
 The old recovered folder exists outside this repo at `E:\users\kjf\Documents\dev\ai\projects\the-pool-old`. Nothing is being automatically recovered from it. If old files are needed later, compare them deliberately in a separate backlog item before copying anything forward.
+
+## Repo-Owned Skills
+
+The Pool workflow skills live under `.codex\skills` and are versioned with the project. Treat those repo-owned skills as the project source of truth. See `notes\shared_skills_strategy.md` for the sharing policy.
