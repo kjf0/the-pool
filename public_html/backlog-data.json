@@ -112,12 +112,12 @@
   {
     "id": 12,
     "title": "Shared skills strategy",
-    "status": "Not started",
+    "status": "Done",
     "labels": "workflow, codex-skill, team",
     "priority": "P1",
-    "assignedDev": "Unassigned",
-    "estimatedCodeComplete": "TBD",
-    "description": "Design a way to share Codex workflow skills between projects."
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-26",
+    "description": "Keep repo-owned skills as the project source of truth and define when reusable skills should be copied, documented, or extracted."
   },
   {
     "id": 13,

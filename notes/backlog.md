@@ -148,13 +148,13 @@ Create a Codex skill for durable project memory and notes hygiene.
 
 ### 12. Shared skills strategy
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, team
 Priority: P1
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
 
-Design a way to share Codex workflow skills between projects.
+Keep repo-owned skills as the project source of truth and define when reusable skills should be copied, documented, or extracted.
 
 ### 13. Skill report skill
 
