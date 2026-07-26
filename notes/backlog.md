@@ -1,10 +1,10 @@
 # Backlog
 
-This project was originally `pool-site`, then renamed to `the-pool`. It is being rebooted again from the current folder:
+This project was originally `pool-site`, temporarily used `the-pool-new` during Windows rename recovery, and is now anchored at `the-pool`.
 
-- Current reboot folder: `E:\users\kjf\Documents\dev\ai\projects\the-pool-new`
-- Previous project folder: `E:\users\kjf\Documents\dev\ai\projects\the-pool`
-- Intended folder cleanup: rename the previous `the-pool` folder to `the-pool-bad`, then rename `the-pool-new` to `the-pool`
+- Current project folder: `E:\users\kjf\Documents\dev\ai\projects\the-pool`
+- Previous project folder: `E:\users\kjf\Documents\dev\ai\projects\the-pool-old`
+- Completed folder cleanup: after logging out and back in, renamed the old `the-pool` folder to `the-pool-old`, renamed `the-pool-new` to `the-pool`, and renamed the Codex project from `the-pool-new` to `the-pool`.
 
 The reboot followed git problems and file permission errors, so workflow reliability is part of the project scope, not just website development.
 
@@ -308,9 +308,34 @@ Evidence:
 - Added labels, priority, assigned dev, and estimated code complete fields to all current backlog items.
 - Marked item 13 complete after applying the metadata structure.
 
+### 15. Renaming fix
+
+Status: Done
+Labels: workflow, codex-skill, rename, project-setup
+Priority: P0
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
+
+Adjust repo workflow notes and Codex skills to use the current project folder name and Codex project name after the Windows rename recovery.
+
+Expected behavior:
+
+- Treat `E:\users\kjf\Documents\dev\ai\projects\the-pool` as the active project folder and anchor checkout.
+- Treat `the-pool` as the Codex project name.
+- Remove stale guidance that says `the-pool-new` is the current reboot folder.
+- Preserve historical context that `the-pool-new` was temporary and `the-pool-old` is the old folder.
+- Verify repo-owned skills and helper scripts do not rely on the temporary project name.
+
+Evidence:
+
+- Updated this backlog header to reflect the completed rename from `the-pool-new` to `the-pool`.
+- Added explicit `the-pool` project name and anchor folder guidance to `.codex\skills\start-coding-day\SKILL.md`.
+- Verified repo-owned skills and helper scripts contain no stale `the-pool-new` current-folder guidance.
+- Ran `start_day_check.py` and `status_summary.py`; both report `E:\users\kjf\Documents\dev\ai\projects\the-pool` as the active project folder.
+
 ## Website Work
 
-### 15. Build three-page website structure
+### 16. Build three-page website structure
 
 Status: Not started
 Labels: website, backlog, project-page
@@ -327,7 +352,7 @@ Expected behavior:
 - Backlog: a page showing backlog items and status, so the project backlog can be viewed in the website during development.
 - Keep the website simple enough to evolve while making the project workflow visible.
 
-### 16. Confirm reboot baseline
+### 17. Confirm reboot baseline
 
 Status: Not started
 Labels: reboot, audit, recovery
@@ -343,7 +368,7 @@ Expected behavior:
 - Confirm whether this reboot should preserve, replace, or recover any files from the previous `the-pool` folder.
 - Document what is intentionally carried forward from the old project.
 
-### 17. Define first usable website milestone
+### 18. Define first usable website milestone
 
 Status: Not started
 Labels: product, website, planning
@@ -359,7 +384,7 @@ Expected behavior:
 - Identify the minimum useful pool maintenance data model.
 - Decide which content belongs in the website and which belongs only in Obsidian notes.
 
-### 18. Editable backlog page with persisted data
+### 19. Editable backlog page with persisted data
 
 Status: Not started
 Labels: website, backlog, data-model

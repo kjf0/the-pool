@@ -89,7 +89,9 @@ Do not create one sibling folder per worktree directly under `E:\users\kjf\Docum
 
 For the Poolside project:
 
-- Prefer project-facing name `the-pool`.
+- Use `the-pool` as the project-facing name and Codex project name.
+- Treat `E:\users\kjf\Documents\dev\ai\projects\the-pool` as the current project folder and anchor checkout.
+- Treat `the-pool-new` as a temporary Windows rename recovery name, not the current project.
 - Keep website source and plain-Markdown Obsidian notes in the same repository.
 - Treat stale PATH as plausible on Windows when Codex cannot find tools that may have been installed after the app started.
 - Do not treat missing `npm` or `gh` as definitive until checking known direct paths or asking the user to reload Codex.
