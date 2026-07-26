@@ -26,7 +26,7 @@ Use this skill for the everyday development loop after a feature worktree exists
 3. Gather context before editing:
 
    - Read nearby code and notes that own the behavior being changed.
-   - Check `notes\backlog.md` for acceptance criteria and related items.
+   - Check `public_html\backlog-data.json` for structured backlog state and `notes\backlog.md` for the generated human-readable report.
    - Inspect project tooling before inventing validation commands.
    - Preserve unrelated user changes.
 

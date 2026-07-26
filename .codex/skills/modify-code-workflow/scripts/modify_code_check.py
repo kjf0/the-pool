@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import subprocess
 import sys
@@ -74,6 +75,30 @@ def parse_backlog(path: Path) -> list[BacklogItem]:
     return items
 
 
+def parse_backlog_json(path: Path) -> list[BacklogItem]:
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    items: list[BacklogItem] = []
+    for entry in data:
+        items.append(
+            BacklogItem(
+                number=int(entry.get("id", 0)),
+                title=str(entry.get("title", "")).strip(),
+                status=str(entry.get("status", "")).strip(),
+                priority=str(entry.get("priority", "")).strip(),
+            )
+        )
+    return [item for item in items if item.number and item.title]
+
+
+def load_backlog(root: Path) -> list[BacklogItem]:
+    json_items = parse_backlog_json(root / "public_html" / "backlog-data.json")
+    if json_items:
+        return json_items
+    return parse_backlog(root / "notes" / "backlog.md")
+
+
 def validation_hints(root: Path) -> list[str]:
     hints: list[str] = []
     if (root / "package.json").exists():
@@ -99,7 +124,7 @@ def main() -> int:
     branch = current_branch(root)
     code, status = git(root, "status", "--short")
     dirty = bool(status.strip()) if code == 0 else True
-    backlog_items = parse_backlog(root / "notes" / "backlog.md")
+    backlog_items = load_backlog(root)
     branch_slug = slugify(branch)
     matches = [item for item in backlog_items if item.slug and item.slug in branch_slug]
 

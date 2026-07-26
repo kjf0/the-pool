@@ -86,6 +86,30 @@ def parse_backlog(path: Path) -> list[BacklogItem]:
     return items
 
 
+def parse_backlog_json(path: Path) -> list[BacklogItem]:
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    items: list[BacklogItem] = []
+    for entry in data:
+        items.append(
+            BacklogItem(
+                number=int(entry.get("id", 0)),
+                title=str(entry.get("title", "")).strip(),
+                status=str(entry.get("status", "")).strip(),
+                priority=str(entry.get("priority", "")).strip(),
+            )
+        )
+    return [item for item in items if item.number and item.title]
+
+
+def load_backlog(root: Path) -> list[BacklogItem]:
+    json_items = parse_backlog_json(root / "public_html" / "backlog-data.json")
+    if json_items:
+        return json_items
+    return parse_backlog(root / "notes" / "backlog.md")
+
+
 def repo_root(repo: Path) -> Path:
     code, output = git(repo, "rev-parse", "--show-toplevel")
     if code != 0:
@@ -168,7 +192,7 @@ def main() -> int:
         print(str(exc), file=sys.stderr)
         return 2
 
-    backlog_items = parse_backlog(root / "notes" / "backlog.md")
+    backlog_items = load_backlog(root)
     worktrees = parse_worktrees(root)
     for worktree in worktrees:
         fill_worktree_state(worktree, root, backlog_items)

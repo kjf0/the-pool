@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "title": "Start coding day skill",
+    "status": "Done",
+    "labels": "workflow, codex-skill, git",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-25",
+    "description": "Create a Codex skill that prepares the project for a workday of coding."
+  },
+  {
+    "id": 2,
+    "title": "Status summary skill",
+    "status": "Done",
+    "labels": "workflow, codex-skill, reporting, handoff",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-25",
+    "description": "Create a Codex skill that reports the current project state at a logical stopping point so work can resume later."
+  },
+  {
+    "id": 3,
+    "title": "Finish previous work skill",
+    "status": "Done",
+    "labels": "workflow, codex-skill, git",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-25",
+    "description": "Create a Codex skill that cleans up work left from a previous day."
+  },
+  {
+    "id": 4,
+    "title": "Sync local main skill",
+    "status": "Done",
+    "labels": "workflow, codex-skill, git",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-25",
+    "description": "Create a Codex skill or script-backed workflow to update local main."
+  },
+  {
+    "id": 5,
+    "title": "Create feature worktree skill",
+    "status": "Done",
+    "labels": "workflow, codex-skill, git, worktree",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-25",
+    "description": "Create a Codex skill that creates a dedicated worktree and branch from updated main."
+  },
+  {
+    "id": 6,
+    "title": "Modify code workflow",
+    "status": "Done",
+    "labels": "workflow, codex-skill, development",
+    "priority": "P1",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-25",
+    "description": "Define the normal Codex development loop for this project."
+  },
+  {
+    "id": 7,
+    "title": "Sync feature branch with main skill",
+    "status": "Not started",
+    "labels": "workflow, codex-skill, git",
+    "priority": "P1",
+    "assignedDev": "Unassigned",
+    "estimatedCodeComplete": "TBD",
+    "description": "Create a Codex skill that updates an active feature branch from current main."
+  },
+  {
+    "id": 8,
+    "title": "Publish branch/worktree skill",
+    "status": "Done",
+    "labels": "workflow, codex-skill, git, github",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-26",
+    "description": "Create a Codex skill that prepares and publishes a branch."
+  },
+  {
+    "id": 9,
+    "title": "Create PR skill",
+    "status": "Done",
+    "labels": "workflow, codex-skill, github",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-26",
+    "description": "Create a Codex skill that opens a pull request to main."
+  },
+  {
+    "id": 10,
+    "title": "Review and merge outside Codex",
+    "status": "Not started",
+    "labels": "workflow, github, review",
+    "priority": "P2",
+    "assignedDev": "User",
+    "estimatedCodeComplete": "TBD",
+    "description": "Keep PR review and merge as a separately supervised step outside Codex."
+  },
+  {
+    "id": 11,
+    "title": "Project memory curator skill",
+    "status": "Not started",
+    "labels": "workflow, codex-skill, memory, notes",
+    "priority": "P1",
+    "assignedDev": "Unassigned",
+    "estimatedCodeComplete": "TBD",
+    "description": "Create a Codex skill for durable project memory and notes hygiene."
+  },
+  {
+    "id": 12,
+    "title": "Shared skills strategy",
+    "status": "Not started",
+    "labels": "workflow, codex-skill, team",
+    "priority": "P1",
+    "assignedDev": "Unassigned",
+    "estimatedCodeComplete": "TBD",
+    "description": "Design a way to share Codex workflow skills between projects."
+  },
+  {
+    "id": 13,
+    "title": "Skill report skill",
+    "status": "Not started",
+    "labels": "workflow, codex-skill, reporting",
+    "priority": "P1",
+    "assignedDev": "Unassigned",
+    "estimatedCodeComplete": "TBD",
+    "description": "Create a Codex skill that reports the repo skills available for the current project."
+  },
+  {
+    "id": 14,
+    "title": "Backlog item metadata",
+    "status": "Done",
+    "labels": "backlog, planning, website-data",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-25",
+    "description": "Improve the backlog structure so each item can carry planning and ownership metadata."
+  },
+  {
+    "id": 15,
+    "title": "Renaming fix",
+    "status": "Done",
+    "labels": "workflow, codex-skill, rename, project-setup",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-26",
+    "description": "Adjust repo workflow notes and Codex skills to use the current project folder name and Codex project name after Windows rename recovery."
+  },
+  {
+    "id": 16,
+    "title": "Build three-page website structure",
+    "status": "Done",
+    "labels": "website, backlog, project-page",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-26",
+    "description": "Create the initial home, project, and backlog pages for the website."
+  },
+  {
+    "id": 17,
+    "title": "Confirm reboot baseline",
+    "status": "Done",
+    "labels": "reboot, audit, recovery",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-26",
+    "description": "Establish the current website baseline after the folder reboot."
+  },
+  {
+    "id": 18,
+    "title": "Define first usable website milestone",
+    "status": "Not started",
+    "labels": "product, website, planning",
+    "priority": "P1",
+    "assignedDev": "Unassigned",
+    "estimatedCodeComplete": "TBD",
+    "description": "Clarify the first screen, core workflow, and minimum useful pool maintenance data model."
+  },
+  {
+    "id": 19,
+    "title": "Editable backlog page with persisted data",
+    "status": "Done",
+    "labels": "website, backlog, data-model",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-26",
+    "description": "Use repo-backed JSON as the structured backlog source, regenerate the Markdown backlog report from it, and let the website backlog page add and change browser-local backlog items."
+  }
+]
