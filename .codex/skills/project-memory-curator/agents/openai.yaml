@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Memory Curator"
+  short_description: "Curate repo notes and memory update guidance."
+  default_prompt: "Curate project memory for this change."
