@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Feature Branch"
+  short_description: "Update a feature branch from current main."
+  default_prompt: "Sync the current feature branch with main."
