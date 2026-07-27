@@ -198,5 +198,15 @@
     "assignedDev": "Codex",
     "estimatedCodeComplete": "2026-07-27",
     "description": "Display current backlog items in spreadsheet format with a column for each backlog field."
+  },
+  {
+    "id": 21,
+    "title": "Widen backlog report layout",
+    "status": "Done",
+    "labels": "website, backlog, layout",
+    "priority": "P1",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-27",
+    "description": "Widen the backlog report description column and make the backlog form and table use the available page width with margin space."
   }
 ]

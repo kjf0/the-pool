@@ -23,8 +23,10 @@ a[aria-current="page"] {
 }
 
 main {
-  max-width: 720px;
-  padding: 40px 24px;
+  box-sizing: border-box;
+  max-width: 1280px;
+  padding: 40px 32px;
+  width: 100%;
 }
 
 h1 {
@@ -59,8 +61,10 @@ input,
 select,
 textarea {
   border: 1px solid #bcc8c2;
+  box-sizing: border-box;
   border-radius: 4px;
   padding: 10px;
+  width: 100%;
 }
 
 button {
@@ -86,8 +90,18 @@ button {
 
 table {
   border-collapse: collapse;
-  min-width: 960px;
+  min-width: 1120px;
   width: 100%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 18%;
+}
+
+th:nth-child(8),
+td:nth-child(8) {
+  width: 34%;
 }
 
 th,

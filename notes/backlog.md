@@ -237,3 +237,13 @@ Assigned dev: Codex
 Estimated code complete: 2026-07-27
 
 Display current backlog items in spreadsheet format with a column for each backlog field.
+
+### 21. Widen backlog report layout
+
+Status: Done
+Labels: website, backlog, layout
+Priority: P1
+Assigned dev: Codex
+Estimated code complete: 2026-07-27
+
+Widen the backlog report description column and make the backlog form and table use the available page width with margin space.
