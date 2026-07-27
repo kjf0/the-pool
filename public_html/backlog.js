@@ -11,6 +11,7 @@
     description: document.querySelector("#item-description")
   };
   const form = document.querySelector("#backlog-form");
+  const formSection = document.querySelector("#item-form-section");
   const list = document.querySelector("#backlog-items");
   const report = document.querySelector("#backlog-report");
   const newButton = document.querySelector("#new-item");
@@ -169,6 +170,8 @@
     const item = items.find((candidate) => Number(candidate.id) === Number(editButton.dataset.edit));
     if (item) {
       fillForm(item);
+      formSection.open = true;
+      fields.title.focus();
     }
   });
 

@@ -17,86 +17,95 @@
       <h1>Backlog</h1>
       <p>Backlog changes are saved in this browser.</p>
 
-      <form id="backlog-form">
-        <input type="hidden" id="item-id">
+      <details class="page-section" id="item-form-section">
+        <summary>Item Form</summary>
+        <div class="section-content">
+          <form id="backlog-form">
+            <input type="hidden" id="item-id">
 
-        <label>
-          Title
-          <input id="item-title" required>
-        </label>
+            <label>
+              Title
+              <input id="item-title" required>
+            </label>
 
-        <label>
-          Status
-          <select id="item-status">
-            <option>Not started</option>
-            <option>In progress</option>
-            <option>Done</option>
-            <option>Blocked</option>
-          </select>
-        </label>
+            <label>
+              Status
+              <select id="item-status">
+                <option>Not started</option>
+                <option>In progress</option>
+                <option>Done</option>
+                <option>Blocked</option>
+              </select>
+            </label>
 
-        <label>
-          Priority
-          <select id="item-priority">
-            <option>P0</option>
-            <option>P1</option>
-            <option>P2</option>
-            <option>P3</option>
-          </select>
-        </label>
+            <label>
+              Priority
+              <select id="item-priority">
+                <option>P0</option>
+                <option>P1</option>
+                <option>P2</option>
+                <option>P3</option>
+              </select>
+            </label>
 
-        <label>
-          Labels
-          <input id="item-labels" placeholder="website, backlog">
-        </label>
+            <label>
+              Labels
+              <input id="item-labels" placeholder="website, backlog">
+            </label>
 
-        <label>
-          Assigned dev
-          <input id="item-assigned" placeholder="Unassigned">
-        </label>
+            <label>
+              Assigned dev
+              <input id="item-assigned" placeholder="Unassigned">
+            </label>
 
-        <label>
-          Estimated code complete
-          <input id="item-estimate" placeholder="TBD">
-        </label>
+            <label>
+              Estimated code complete
+              <input id="item-estimate" placeholder="TBD">
+            </label>
 
-        <label>
-          Description
-          <textarea id="item-description" rows="4"></textarea>
-        </label>
+            <label>
+              Description
+              <textarea id="item-description" rows="4"></textarea>
+            </label>
 
-        <div class="actions">
-          <button type="submit">Save item</button>
-          <button type="button" id="new-item">New item</button>
-          <button type="button" id="reset-data">Reset data</button>
+            <div class="actions">
+              <button type="submit">Save item</button>
+              <button type="button" id="new-item">New item</button>
+              <button type="button" id="reset-data">Reset data</button>
+            </div>
+          </form>
         </div>
-      </form>
+      </details>
 
-      <section>
-        <h2>Report</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Status</th>
-                <th>Labels</th>
-                <th>Priority</th>
-                <th>Assigned dev</th>
-                <th>Estimated code complete</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody id="backlog-report"></tbody>
-          </table>
+      <details class="page-section">
+        <summary>Report</summary>
+        <div class="section-content">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Status</th>
+                  <th>Labels</th>
+                  <th>Priority</th>
+                  <th>Assigned dev</th>
+                  <th>Estimated code complete</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody id="backlog-report"></tbody>
+            </table>
+          </div>
         </div>
-      </section>
+      </details>
 
-      <section>
-        <h2>Edit Items</h2>
-        <div id="backlog-items"></div>
-      </section>
+      <details class="page-section">
+        <summary>Edit Items</summary>
+        <div class="section-content">
+          <div id="backlog-items"></div>
+        </div>
+      </details>
     </main>
 
     <script src="backlog.js"></script>

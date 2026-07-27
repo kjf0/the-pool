@@ -41,7 +41,7 @@ li {
 form {
   display: grid;
   gap: 16px;
-  margin: 24px 0 40px;
+  margin: 0;
 }
 
 label {
@@ -77,6 +77,61 @@ button {
   padding: 10px 12px;
 }
 
+.page-section {
+  border-top: 1px solid #d8dedb;
+  margin-top: 18px;
+  padding-top: 12px;
+}
+
+.page-section summary {
+  align-items: center;
+  color: #185b6b;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.08rem;
+  font-weight: 700;
+  gap: 10px;
+  list-style: none;
+  min-height: 40px;
+}
+
+.page-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.page-section summary::before {
+  content: "+";
+  border: 1px solid #185b6b;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-grid;
+  flex: 0 0 28px;
+  height: 28px;
+  place-items: center;
+  width: 28px;
+}
+
+.page-section[open] summary::before {
+  content: "-";
+}
+
+.page-section summary:focus-visible {
+  outline: 3px solid #8cc8d6;
+  outline-offset: 3px;
+}
+
+.section-content {
+  padding: 12px 0 20px;
+}
+
+.section-content > :first-child {
+  margin-top: 0;
+}
+
+.section-content > :last-child {
+  margin-bottom: 0;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -84,7 +139,7 @@ button {
 }
 
 .table-wrap {
-  margin: 16px 0 32px;
+  margin: 0 0 12px;
   overflow-x: auto;
 }
 
