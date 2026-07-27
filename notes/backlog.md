@@ -210,13 +210,13 @@ Establish the current website baseline after the folder reboot.
 
 ### 18. Define first usable website milestone
 
-Status: Not started
+Status: Done
 Labels: product, website, planning
 Priority: P1
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-27
 
-Clarify the first screen, core workflow, and minimum useful pool maintenance data model.
+Define the first useful website milestone as a browser-local pool care log with readings, tasks, and notes.
 
 ### 19. Editable backlog page with persisted data
 
