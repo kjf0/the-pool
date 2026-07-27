@@ -12,6 +12,7 @@
   };
   const form = document.querySelector("#backlog-form");
   const list = document.querySelector("#backlog-items");
+  const report = document.querySelector("#backlog-report");
   const newButton = document.querySelector("#new-item");
   const resetButton = document.querySelector("#reset-data");
 
@@ -82,13 +83,10 @@
 
   function renderItems() {
     list.innerHTML = "";
-    items
-      .slice()
-      .sort((a, b) => Number(a.id) - Number(b.id))
-      .forEach((item) => {
-        const article = document.createElement("article");
-        article.className = "backlog-item";
-        article.innerHTML = `
+    sortedItems().forEach((item) => {
+      const article = document.createElement("article");
+      article.className = "backlog-item";
+      article.innerHTML = `
           <h3>${item.id}. ${escapeHtml(item.title)}</h3>
           <dl>
             <dt>Status</dt><dd>${escapeHtml(item.status)}</dd>
@@ -100,8 +98,35 @@
           <p>${escapeHtml(item.description)}</p>
           <button type="button" data-edit="${item.id}">Edit</button>
         `;
-        list.appendChild(article);
-      });
+      list.appendChild(article);
+    });
+  }
+
+  function renderReport() {
+    report.innerHTML = "";
+    sortedItems().forEach((item) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${escapeHtml(item.id)}</td>
+        <td>${escapeHtml(item.title)}</td>
+        <td>${escapeHtml(item.status)}</td>
+        <td>${escapeHtml(item.labels)}</td>
+        <td>${escapeHtml(item.priority)}</td>
+        <td>${escapeHtml(item.assignedDev)}</td>
+        <td>${escapeHtml(item.estimatedCodeComplete)}</td>
+        <td>${escapeHtml(item.description)}</td>
+      `;
+      report.appendChild(row);
+    });
+  }
+
+  function renderBacklog() {
+    renderReport();
+    renderItems();
+  }
+
+  function sortedItems() {
+    return items.slice().sort((a, b) => Number(a.id) - Number(b.id));
   }
 
   function escapeHtml(value) {
@@ -124,7 +149,7 @@
     }
     saveItems();
     clearForm();
-    renderItems();
+    renderBacklog();
   });
 
   newButton.addEventListener("click", clearForm);
@@ -133,7 +158,7 @@
     items = [...seedItems];
     localStorage.removeItem(storageKey);
     clearForm();
-    renderItems();
+    renderBacklog();
   });
 
   list.addEventListener("click", (event) => {
@@ -152,7 +177,7 @@
       seedItems = loadedItems;
       items = loadStoredItems() || [...seedItems];
       clearForm();
-      renderItems();
+      renderBacklog();
     })
     .catch((error) => {
       list.textContent = error.message;

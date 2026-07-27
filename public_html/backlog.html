@@ -73,7 +73,28 @@
       </form>
 
       <section>
-        <h2>Items</h2>
+        <h2>Report</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Labels</th>
+                <th>Priority</th>
+                <th>Assigned dev</th>
+                <th>Estimated code complete</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody id="backlog-report"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Edit Items</h2>
         <div id="backlog-items"></div>
       </section>
     </main>

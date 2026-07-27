@@ -192,11 +192,11 @@
   {
     "id": 20,
     "title": "Backlog report",
-    "status": "Not started",
+    "status": "Done",
     "labels": "website, backlog, reporting",
     "priority": "P1",
-    "assignedDev": "Unassigned",
-    "estimatedCodeComplete": "TBD",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-27",
     "description": "Display current backlog items in spreadsheet format with a column for each backlog field."
   }
 ]

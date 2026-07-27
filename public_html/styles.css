@@ -79,6 +79,33 @@ button {
   gap: 10px;
 }
 
+.table-wrap {
+  margin: 16px 0 32px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 960px;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #d8dedb;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #eef3f1;
+}
+
+td {
+  background: #ffffff;
+}
+
 .backlog-item {
   border-top: 1px solid #d8dedb;
   padding: 18px 0;
