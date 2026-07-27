@@ -128,13 +128,13 @@ Create a Codex skill that opens a pull request to main.
 
 ### 10. Review and merge outside Codex
 
-Status: Not started
+Status: Done
 Labels: workflow, github, review
 Priority: P2
 Assigned dev: User
-Estimated code complete: TBD
+Estimated code complete: 2026-07-27
 
-Keep PR review and merge as a separately supervised step outside Codex.
+Keep PR review and merge as a separately supervised step outside Codex; the user is familiar with the GitHub merge workflow.
 
 ### 11. Project memory curator skill
 

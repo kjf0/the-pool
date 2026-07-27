@@ -42,10 +42,8 @@ Use this skill after a feature branch has been committed and pushed. Prefer draf
 6. Summarize:
 
    - PR URL.
-   - Branch and base.
-   - Draft or ready state.
-   - Validation included in the PR body.
-   - Any known risks.
+   - Edited files.
+   - End with: `ready for a dev to merge the pr on github...`
 
 ## Helper Behavior
 

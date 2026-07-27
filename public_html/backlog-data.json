@@ -92,12 +92,12 @@
   {
     "id": 10,
     "title": "Review and merge outside Codex",
-    "status": "Not started",
+    "status": "Done",
     "labels": "workflow, github, review",
     "priority": "P2",
     "assignedDev": "User",
-    "estimatedCodeComplete": "TBD",
-    "description": "Keep PR review and merge as a separately supervised step outside Codex."
+    "estimatedCodeComplete": "2026-07-27",
+    "description": "Keep PR review and merge as a separately supervised step outside Codex; the user is familiar with the GitHub merge workflow."
   },
   {
     "id": 11,
