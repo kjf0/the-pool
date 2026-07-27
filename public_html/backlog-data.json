@@ -172,12 +172,12 @@
   {
     "id": 18,
     "title": "Define first usable website milestone",
-    "status": "Not started",
+    "status": "Done",
     "labels": "product, website, planning",
     "priority": "P1",
-    "assignedDev": "Unassigned",
-    "estimatedCodeComplete": "TBD",
-    "description": "Clarify the first screen, core workflow, and minimum useful pool maintenance data model."
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-27",
+    "description": "Define the first useful website milestone as a browser-local pool care log with readings, tasks, and notes."
   },
   {
     "id": 19,
