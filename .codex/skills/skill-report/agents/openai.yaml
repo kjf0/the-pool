@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Report"
+  short_description: "Report repo-owned workflow skills."
+  default_prompt: "List repo skills for this project."

@@ -158,11 +158,11 @@ Keep repo-owned skills as the project source of truth and define when reusable s
 
 ### 13. Skill report skill
 
-Status: Not started
+Status: Done
 Labels: workflow, codex-skill, reporting
 Priority: P1
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-26
 
 Create a Codex skill that reports the repo skills available for the current project.
 
