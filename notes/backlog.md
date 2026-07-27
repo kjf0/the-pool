@@ -230,10 +230,10 @@ Use repo-backed JSON as the structured backlog source, regenerate the Markdown b
 
 ### 20. Backlog report
 
-Status: Not started
+Status: Done
 Labels: website, backlog, reporting
 Priority: P1
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-07-27
 
 Display current backlog items in spreadsheet format with a column for each backlog field.
