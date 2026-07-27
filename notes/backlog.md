@@ -257,3 +257,13 @@ Assigned dev: Codex
 Estimated code complete: 2026-07-27
 
 Make the three major sections of the backlog page collapsible and expandable, show page sections initially collapsed, and make all sections of all pages collapsible to support hidden data and minimalization.
+
+### 23. Add home page water test section
+
+Status: Done
+Labels: website, pool-care, water-testing
+Priority: P0
+Assigned dev: Codex
+Estimated code complete: 2026-07-27
+
+Add a home page section that lists the last three 7-in-1 water test readings, shows acceptable low and high values for each strip metric, and includes a Leslie's-style color chart with readings placed to the right of the chart columns.
