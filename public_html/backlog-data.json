@@ -208,5 +208,15 @@
     "assignedDev": "Codex",
     "estimatedCodeComplete": "2026-07-27",
     "description": "Widen the backlog report description column and make the backlog form and table use the available page width with margin space."
+  },
+  {
+    "id": 22,
+    "title": "Collapse page sections",
+    "status": "Done",
+    "labels": "website, layout, minimalization",
+    "priority": "P0",
+    "assignedDev": "Codex",
+    "estimatedCodeComplete": "2026-07-27",
+    "description": "Make the three major sections of the backlog page collapsible and expandable, show page sections initially collapsed, and make all sections of all pages collapsible to support hidden data and minimalization."
   }
 ]
