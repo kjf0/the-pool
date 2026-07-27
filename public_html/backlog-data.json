@@ -188,5 +188,15 @@
     "assignedDev": "Codex",
     "estimatedCodeComplete": "2026-07-26",
     "description": "Use repo-backed JSON as the structured backlog source, regenerate the Markdown backlog report from it, and let the website backlog page add and change browser-local backlog items."
+  },
+  {
+    "id": 20,
+    "title": "Backlog report",
+    "status": "Not started",
+    "labels": "website, backlog, reporting",
+    "priority": "P1",
+    "assignedDev": "Unassigned",
+    "estimatedCodeComplete": "TBD",
+    "description": "Display current backlog items in spreadsheet format with a column for each backlog field."
   }
 ]
