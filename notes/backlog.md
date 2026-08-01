@@ -267,3 +267,33 @@ Assigned dev: Codex
 Estimated code complete: 2026-07-27
 
 Add a home page section that lists the last three 7-in-1 water test readings, shows acceptable low and high values for each strip metric, and includes a Leslie's-style color chart with readings placed to the right of the chart columns.
+
+### 24. Enhance skill report
+
+Status: Done
+Labels: workflow, codex-skill, reporting
+Priority: P0
+Assigned dev: Codex
+Estimated code complete: 2026-08-01
+
+After the skill name, add space + hyphen + space + short description of the skill. Add a parameter, such as --verbose, to include a longer description detailing the steps and decisions. This could be a pseudocode format.
+
+### 25. Show readings in vertical orientation
+
+Status: Not started
+Labels: website, pool-care, water-testing, layout
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
+On the home page, under the last three readings section, make the recent readings to the right of the chart display in columns. Row 0 should be date and time. Row 1 should be free chlorine. Row 2 should be bromine. Row 3 should be total chlorine. Row 4 should be alkalinity. And so on. Replace the header 'recent readings' with 'date'. The readings do not need 'ppm', but 'ppm' could be in the leftmost column, with the abbreviation. So the first entry under 'Strip value' would be 'FCl (ppm)'.
+
+### 26. Water treatment calculator
+
+Status: Not started
+Labels: website, pool-care, calculator, water-treatment
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
+After readings are entered, examine all values and determine a water treatment plan. In the plan, include the calculations, for example: one ounce of 10% sodium hypochlorite raises chlorine by 1 ppm for every 10,000 gallons of water. Those values are made up, but the formulas should read somewhat like this so users can check the math and estimate what the next reading should be.
