@@ -16,8 +16,13 @@ from pathlib import Path
 class Skill:
     name: str
     description: str
+    short_description: str
+    short_description_source: str
     group: str
     path: Path
+    overview: list[str]
+    workflow: list[str]
+    safety_rules: list[str]
 
 
 def run(cwd: Path, args: list[str]) -> subprocess.CompletedProcess[str]:
@@ -41,6 +46,45 @@ def frontmatter_value(text: str, key: str) -> str:
     if not match:
         return ""
     return match.group(1).strip().strip('"')
+
+
+def yaml_value(text: str, key: str) -> str:
+    match = re.search(rf"^\s*{re.escape(key)}:\s*(.+)$", text, flags=re.MULTILINE)
+    if not match:
+        return ""
+    return match.group(1).strip().strip('"')
+
+
+def first_sentence(text: str) -> str:
+    sentence = re.split(r"(?<=[.!?])\s+", text.strip(), maxsplit=1)[0]
+    return sentence.rstrip(".")
+
+
+def section_text(text: str, heading: str) -> str:
+    match = re.search(
+        rf"^## {re.escape(heading)}\s*$([\s\S]*?)(?=^## |\Z)",
+        text,
+        flags=re.MULTILINE,
+    )
+    return match.group(1).strip() if match else ""
+
+
+def pseudocode_lines(section: str) -> list[str]:
+    lines: list[str] = []
+    in_code = False
+    for raw_line in section.splitlines():
+        line = raw_line.strip()
+        if line.startswith("```"):
+            in_code = not in_code
+            continue
+        if in_code or not line:
+            continue
+        line = re.sub(r"^\d+\.\s+", "", line)
+        line = re.sub(r"^[-*]\s+", "", line)
+        line = line.strip()
+        if line:
+            lines.append(line)
+    return lines
 
 
 def skill_group(name: str, description: str) -> str:
@@ -82,13 +126,53 @@ def load_skills(root: Path) -> list[Skill]:
         text = skill_file.read_text(encoding="utf-8")
         name = frontmatter_value(text, "name") or skill_dir.name
         description = frontmatter_value(text, "description")
-        skills.append(Skill(name=name, description=description, group=skill_group(name, description), path=skill_dir))
+        agent_file = skill_dir / "agents" / "openai.yaml"
+        agent_text = agent_file.read_text(encoding="utf-8") if agent_file.exists() else ""
+        agent_short_description = yaml_value(agent_text, "short_description")
+        short_description = agent_short_description or first_sentence(description)
+        short_description_source = "agents/openai.yaml" if agent_short_description else "SKILL.md description"
+        skills.append(
+            Skill(
+                name=name,
+                description=description,
+                short_description=short_description,
+                short_description_source=short_description_source,
+                group=skill_group(name, description),
+                path=skill_dir,
+                overview=pseudocode_lines(section_text(text, "Overview")),
+                workflow=pseudocode_lines(section_text(text, "Workflow")),
+                safety_rules=pseudocode_lines(section_text(text, "Safety Rules")),
+            )
+        )
     return skills
+
+
+def print_verbose_skill(root: Path, skill: Skill) -> None:
+    rel_path = skill.path.relative_to(root)
+    print(f"  source: {rel_path}")
+    print(f"  description: {skill.description}")
+    print("  decisions:")
+    print(f"    - group: {skill.group}")
+    print(f"    - short_description: {skill.short_description_source}")
+    print("    - verbose_detail: SKILL.md Overview, Workflow, and Safety Rules sections")
+    if skill.overview:
+        print("  overview:")
+        for line in skill.overview:
+            print(f"    - {line}")
+    if skill.workflow:
+        print("  workflow:")
+        for line in skill.workflow:
+            print(f"    - {line}")
+    if skill.safety_rules:
+        print("  safety:")
+        for line in skill.safety_rules:
+            print(f"    - {line}")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", default=".", help="Repository or worktree path to inspect.")
+    parser.add_argument("--verbose", action="store_true", help="Include pseudocode-style workflow details for each skill.")
     args = parser.parse_args()
 
     try:
@@ -110,7 +194,9 @@ def main() -> int:
         if skill.group != current_group:
             current_group = skill.group
             print(f"\n## {current_group}")
-        print(f"- {skill.name}: {skill.description}")
+        print(f"- {skill.name} - {skill.short_description}")
+        if args.verbose:
+            print_verbose_skill(root, skill)
 
     print("\n## Policy")
     print("- Prefer repo-owned skills under .codex\\skills for this project.")

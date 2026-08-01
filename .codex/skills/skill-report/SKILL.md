@@ -17,12 +17,19 @@ Use this skill to list the project skills under `.codex\skills` with their descr
    python .codex\skills\skill-report\scripts\skill_report.py --repo .
    ```
 
+   Use `--verbose` when the user wants longer implementation details:
+
+   ```powershell
+   python .codex\skills\skill-report\scripts\skill_report.py --repo . --verbose
+   ```
+
 2. Report:
 
    - Skill source path.
    - Count of repo-owned skills.
    - Skill names grouped by usage area.
-   - One-line description for each skill.
+   - Skill name, space-hyphen-space, and one-line short description for each skill.
+   - With `--verbose`, include pseudocode-style source, decisions, overview, workflow, and safety details.
    - Reminder to prefer repo-owned skills.
 
 3. If a skill appears missing or stale:
