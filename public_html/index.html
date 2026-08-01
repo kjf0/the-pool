@@ -37,16 +37,18 @@
                 <span>Low</span>
                 <span>High</span>
                 <span>Bottle color chart</span>
-                <span>Recent readings</span>
+                <span>Date<br><small>Jul 27, 8:00 AM</small></span>
+                <span>Date<br><small>Jul 24, 8:00 AM</small></span>
+                <span>Date<br><small>Jul 21, 8:00 AM</small></span>
               </div>
 
               <div class="chart-row">
                 <div class="chart-label">
-                  <strong>FCl</strong>
-                  <span>Free Chlorine / Bromine ppm</span>
+                  <strong>FCl (ppm)</strong>
+                  <span>Free Chlorine</span>
                 </div>
-                <div class="range-value"><span>1</span><span>2</span></div>
-                <div class="range-value"><span>3</span><span>6</span></div>
+                <div class="range-value">1</div>
+                <div class="range-value">3</div>
                 <div class="swatches">
                   <span class="swatch fcl-0"><b>0</b><small>(0)</small></span>
                   <span class="swatch fcl-05"><b>0.5</b><small>(1)</small></span>
@@ -57,17 +59,28 @@
                   <span class="swatch fcl-5"><b>5</b><small>(10)</small></span>
                   <span class="swatch fcl-10"><b>10</b><small>(20)</small></span>
                 </div>
-                <div class="chart-readings" aria-label="Last three FCl and bromine readings">
-                  <span><b>Jul 27</b>3 ppm / 6 ppm Br</span>
-                  <span><b>Jul 24</b>1 ppm / 2 ppm Br</span>
-                  <span><b>Jul 21</b>0.5 ppm / 1 ppm Br</span>
-                </div>
+                <div class="reading-cell" data-date="Jul 27, 8:00 AM">3</div>
+                <div class="reading-cell" data-date="Jul 24, 8:00 AM">1</div>
+                <div class="reading-cell" data-date="Jul 21, 8:00 AM">0.5</div>
               </div>
 
               <div class="chart-row">
                 <div class="chart-label">
-                  <strong>TCl</strong>
-                  <span>Total Chlorine ppm</span>
+                  <strong>Br (ppm)</strong>
+                  <span>Bromine</span>
+                </div>
+                <div class="range-value">2</div>
+                <div class="range-value">6</div>
+                <div class="reference-cell">Uses the FCl bottle scale values in parentheses.</div>
+                <div class="reading-cell" data-date="Jul 27, 8:00 AM">6</div>
+                <div class="reading-cell" data-date="Jul 24, 8:00 AM">2</div>
+                <div class="reading-cell" data-date="Jul 21, 8:00 AM">1</div>
+              </div>
+
+              <div class="chart-row">
+                <div class="chart-label">
+                  <strong>TCl (ppm)</strong>
+                  <span>Total Chlorine</span>
                 </div>
                 <div class="range-value">1</div>
                 <div class="range-value">3</div>
@@ -81,17 +94,15 @@
                   <span class="swatch tcl-5"><b>5</b></span>
                   <span class="swatch tcl-10"><b>10</b></span>
                 </div>
-                <div class="chart-readings" aria-label="Last three total chlorine readings">
-                  <span><b>Jul 27</b>3 ppm</span>
-                  <span><b>Jul 24</b>1 ppm</span>
-                  <span><b>Jul 21</b>0.5 ppm</span>
-                </div>
+                <div class="reading-cell" data-date="Jul 27, 8:00 AM">3</div>
+                <div class="reading-cell" data-date="Jul 24, 8:00 AM">1</div>
+                <div class="reading-cell" data-date="Jul 21, 8:00 AM">0.5</div>
               </div>
 
               <div class="chart-row">
                 <div class="chart-label">
-                  <strong>Alk</strong>
-                  <span>Alkalinity ppm</span>
+                  <strong>Alk (ppm)</strong>
+                  <span>Alkalinity</span>
                 </div>
                 <div class="range-value">80</div>
                 <div class="range-value">120</div>
@@ -105,11 +116,9 @@
                   <span class="swatch alk-180"><b>180</b></span>
                   <span class="swatch alk-240"><b>240</b></span>
                 </div>
-                <div class="chart-readings" aria-label="Last three alkalinity readings">
-                  <span><b>Jul 27</b>120 ppm</span>
-                  <span><b>Jul 24</b>80 ppm</span>
-                  <span><b>Jul 21</b>80 ppm</span>
-                </div>
+                <div class="reading-cell" data-date="Jul 27, 8:00 AM">120</div>
+                <div class="reading-cell" data-date="Jul 24, 8:00 AM">80</div>
+                <div class="reading-cell" data-date="Jul 21, 8:00 AM">80</div>
               </div>
 
               <div class="chart-row">
@@ -129,17 +138,15 @@
                   <span class="swatch ph-84"><b>8.4</b></span>
                   <span class="swatch ph-90"><b>9.0</b></span>
                 </div>
-                <div class="chart-readings" aria-label="Last three pH readings">
-                  <span><b>Jul 27</b>7.8</span>
-                  <span><b>Jul 24</b>7.2</span>
-                  <span><b>Jul 21</b>7.8</span>
-                </div>
+                <div class="reading-cell" data-date="Jul 27, 8:00 AM">7.8</div>
+                <div class="reading-cell" data-date="Jul 24, 8:00 AM">7.2</div>
+                <div class="reading-cell" data-date="Jul 21, 8:00 AM">7.8</div>
               </div>
 
               <div class="chart-row">
                 <div class="chart-label">
-                  <strong>TH</strong>
-                  <span>Total Hardness ppm</span>
+                  <strong>TH (ppm)</strong>
+                  <span>Total Hardness</span>
                 </div>
                 <div class="range-value">250</div>
                 <div class="range-value">450</div>
@@ -152,17 +159,15 @@
                   </span>
                   <span class="swatch th-800"><b>800+</b></span>
                 </div>
-                <div class="chart-readings" aria-label="Last three total hardness readings">
-                  <span><b>Jul 27</b>250 ppm</span>
-                  <span><b>Jul 24</b>450 ppm</span>
-                  <span><b>Jul 21</b>250 ppm</span>
-                </div>
+                <div class="reading-cell" data-date="Jul 27, 8:00 AM">250</div>
+                <div class="reading-cell" data-date="Jul 24, 8:00 AM">450</div>
+                <div class="reading-cell" data-date="Jul 21, 8:00 AM">250</div>
               </div>
 
               <div class="chart-row">
                 <div class="chart-label">
-                  <strong>CyA</strong>
-                  <span>Cyanuric Acid ppm</span>
+                  <strong>CyA (ppm)</strong>
+                  <span>Cyanuric Acid</span>
                 </div>
                 <div class="range-value">40</div>
                 <div class="range-value">100</div>
@@ -175,11 +180,9 @@
                   <span class="swatch cya-150"><b>150</b></span>
                   <span class="swatch cya-250"><b>250</b></span>
                 </div>
-                <div class="chart-readings" aria-label="Last three cyanuric acid readings">
-                  <span><b>Jul 27</b>40 ppm</span>
-                  <span><b>Jul 24</b>40 ppm</span>
-                  <span><b>Jul 21</b>100 ppm</span>
-                </div>
+                <div class="reading-cell" data-date="Jul 27, 8:00 AM">40</div>
+                <div class="reading-cell" data-date="Jul 24, 8:00 AM">40</div>
+                <div class="reading-cell" data-date="Jul 21, 8:00 AM">100</div>
               </div>
             </div>
           </section>
