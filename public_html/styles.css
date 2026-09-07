@@ -231,7 +231,7 @@ dd {
 .chart-row {
   display: grid;
   gap: 10px;
-  grid-template-columns: minmax(140px, 180px) minmax(48px, 64px) minmax(48px, 64px) minmax(420px, 1fr) minmax(190px, 240px);
+  grid-template-columns: minmax(120px, 160px) minmax(48px, 64px) minmax(48px, 64px) minmax(360px, 1fr) repeat(3, minmax(70px, 88px));
 }
 
 .chart-heading {
@@ -239,6 +239,15 @@ dd {
   font-size: .85rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.chart-heading small {
+  color: #1f2933;
+  display: block;
+  font-size: .72rem;
+  line-height: 1.35;
+  margin-top: 2px;
+  text-transform: none;
 }
 
 .chart-label {
@@ -304,21 +313,25 @@ dd {
   grid-template-columns: repeat(2, minmax(58px, 1fr));
 }
 
-.chart-readings {
-  display: grid;
-  gap: 6px;
-}
-
-.chart-readings span {
+.reading-cell,
+.reference-cell {
+  align-items: center;
   background: #eef3f1;
-  border-left: 3px solid #185b6b;
   border-radius: 4px;
+  display: grid;
+  min-height: 54px;
   padding: 6px 8px;
 }
 
-.chart-readings b {
-  display: inline-block;
-  min-width: 54px;
+.reading-cell {
+  border-left: 3px solid #185b6b;
+  font-weight: 700;
+  justify-items: center;
+}
+
+.reference-cell {
+  color: #5f6b66;
+  font-size: .88rem;
 }
 
 .fcl-0 { background: #efeccf; }
@@ -372,6 +385,18 @@ dd {
 
   .chart-row {
     grid-template-columns: 1fr;
+  }
+
+  .reading-cell {
+    gap: 2px;
+    justify-items: start;
+  }
+
+  .reading-cell::before {
+    color: #5f6b66;
+    content: attr(data-date);
+    font-size: .78rem;
+    font-weight: 700;
   }
 
   .swatches {

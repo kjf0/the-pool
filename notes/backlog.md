@@ -280,11 +280,11 @@ After the skill name, add space + hyphen + space + short description of the skil
 
 ### 25. Show readings in vertical orientation
 
-Status: Not started
+Status: Done
 Labels: website, pool-care, water-testing, layout
 Priority: P0
-Assigned dev: Unassigned
-Estimated code complete: TBD
+Assigned dev: Codex
+Estimated code complete: 2026-08-01
 
 On the home page, under the last three readings section, make the recent readings to the right of the chart display in columns. Row 0 should be date and time. Row 1 should be free chlorine. Row 2 should be bromine. Row 3 should be total chlorine. Row 4 should be alkalinity. And so on. Replace the header 'recent readings' with 'date'. The readings do not need 'ppm', but 'ppm' could be in the leftmost column, with the abbreviation. So the first entry under 'Strip value' would be 'FCl (ppm)'.
 
@@ -297,3 +297,13 @@ Assigned dev: Unassigned
 Estimated code complete: TBD
 
 After readings are entered, examine all values and determine a water treatment plan. In the plan, include the calculations, for example: one ounce of 10% sodium hypochlorite raises chlorine by 1 ppm for every 10,000 gallons of water. Those values are made up, but the formulas should read somewhat like this so users can check the math and estimate what the next reading should be.
+
+### 27. Fix last three readings chart and entry
+
+Status: Not started
+Labels: website, pool-care, water-testing, entry-form, layout
+Priority: P0
+Assigned dev: Unassigned
+Estimated code complete: TBD
+
+The values for FCl and Br must be the same. The future entry form should only accept six values. When a user enters a value for FCl/Br, put that same number in the first two chart rows. Remove the text 'Uses the FCl bottle scale values in parentheses.' and instead show the Bromine numbers on the label.
